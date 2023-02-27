@@ -1,0 +1,38 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+
+@baseUrl = https://reqres.in
+
+# List Users
+GET {{baseUrl}}/api/users?page=2
+
+###
+
+# Single User
+GET {{baseUrl}}/api/users/2
+
+###
+
+# Single User not Found
+GET {{baseUrl}}/api/users/23
+
+###
+
+# Create
+POST {{baseUrl}}/api/users
+Content-Type: application/json
+
+{
+    "name": "morpheus",
+    "job": "leader"
+}
+
+###
+
+# Put
+PUT {{baseUrl}}/api/users/2
+Content-Type: application/json
+
+{
+    "name": "morpheus",
+    "job": "zion resident"
+}
